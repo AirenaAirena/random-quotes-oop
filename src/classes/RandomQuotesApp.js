@@ -11,9 +11,8 @@ class RandomQuotesApp {
   }
 
   displayCurrentQuote() {
-    const { text, autor } = this.currentQuote;
-    this.quoteTextElement.textContent = text;
-    this.quoteAutorElement.textContent = autor;
+    this.quoteTextElement.textContent = this.currentQuote.formatText();
+    this.quoteAutorElement.textContent = this.currentQuote.formatAutor();
   }
 
   getRandomQuote() {

@@ -4,6 +4,13 @@ class Quote {
     this.text = text;
     this.autor = autor;
   }
+
+  formatText() {
+    return `${this.text}`;
+  }
+  formatAutor() {
+    return `© ${this.autor}`;
+  }
 }
 
 export default Quote;
