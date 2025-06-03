@@ -28,6 +28,16 @@ body {
 .btn-primary:hover {
   background-color: #0056b3;
 }
+.btn-secondary {
+  background-color: #6898cc;
+  color: white;
+  border: 1px solid #6898cc;
+}
+
+.btn-secondary:hover {
+  background-color: #396da5;
+  border-color: #0c4583;
+}
 .btn-danger:hover {
   background-color: red;
   color: white;
