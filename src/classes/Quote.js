@@ -1,15 +1,15 @@
 class Quote {
-  constructor(id, text, autor) {
+  constructor(id, text, author) {
     this.id = id;
     this.text = text;
-    this.autor = autor;
+    this.author = author;
   }
 
   formatText() {
     return `${this.text}`;
   }
   formatAutor() {
-    return `© ${this.autor}`;
+    return `© ${this.author}`;
   }
 }
 
