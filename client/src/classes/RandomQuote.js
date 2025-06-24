@@ -9,7 +9,7 @@ class RandomQuote {
     return new Quote(id, text, autor);
   }
 
-  static async getRandomQuoteViaAPI() {
+  static async getRandomQuoteViaPublicAPI() {
     const url = 'https://dummyjson.com/quotes/random';
     const options = { headers: { 'Content-Type': 'application/json' } };
     try {
@@ -27,13 +27,17 @@ class RandomQuote {
     }
   }
 
-  // static getRandomQuoteViaAPI() {
-  //   const url = 'https://dummyjson.com/quotes/random';
-  //   const options = { headers: { 'Content-Type': 'application/json' } };
-  //   return fetch(url, options)
-  //     .then((response) => response.json())
-  //     .then(({ _id: id, quote: text, author }) => new Quote(id, text, author))
-  //     .catch((error) => console.error(error));
-  // }
+  static async getRandomQuoteViaOwnAPI() {
+    const url = 'http://localhost:3000/quotes/random-single';
+    const options = { headers: { 'Content-Type': 'application/json' } };
+    try {
+      const response = await fetch(url, options);
+      const quote = await response.json();
+      const { id, text, autor } = quote;
+      return new Quote(id, text, autor);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 export default RandomQuote;

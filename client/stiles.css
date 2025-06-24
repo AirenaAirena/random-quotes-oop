@@ -10,6 +10,7 @@ body {
 }
 .btn {
   padding: 10px 20px;
+  margin: 10px;
   font-size: 16px;
   /* background-color: #007bff; */
   color: #fff;
@@ -37,6 +38,13 @@ body {
 .btn-secondary:hover {
   background-color: #396da5;
   border-color: #0c4583;
+}
+.btn-ternary {
+  background-color: #ffc107;
+  color: #333;
+}
+.btn-ternary:hover {
+  background-color: #ff761a;
 }
 .btn-danger:hover {
   background-color: red;
